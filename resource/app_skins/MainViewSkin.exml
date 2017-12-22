@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="MainViewSkin" width="3840" height="432" xmlns:e="http://ns.egret.com/eui" xmlns:app="app.*">
+	<e:Group top="0" left="0" bottom="0" right="0">
+		<app:WaitArea skinName="WaitAreaSkin" left="0" top="0" bottom="0" x="0" y="0" scaleX="1" scaleY="1"/>
+		<app:MakeArea x="1015" y="138" skinName="MakeAreaSkin"/>
+		<app:PackArea x="2672" y="102" skinName="PackAreaSkin"/>
+		<app:ReadyArea x="3116" y="88" skinName="ReadyAreaSkin"/>
+		<e:layout>
+			<e:HorizontalLayout gap="0"/>
+		</e:layout>
+	</e:Group>
+</e:Skin>

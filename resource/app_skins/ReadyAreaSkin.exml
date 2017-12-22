@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="ReadyAreaSkin" width="765" height="432" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:app="app.*">
+	<e:Image source="img_bg_qucan_png" left="0" top="0" bottom="0" right="0"/>
+	<e:Image source="img_guidao_1_png" x="20" y="160"/>
+	<e:Image source="img_guidao_2_png" x="0" y="245"/>
+	<e:Group id="group0" width="617" height="85" x="109" y="117" anchorOffsetX="0">
+		<e:Image source="img_baitiao_png" bottom="0" left="0" right="0"/>
+		<e:Image id="img0" source="img_toumingxiangzi_png" x="-79" y="11" anchorOffsetX="0" width="64" anchorOffsetY="0" height="32"/>
+		<app:ReadyUnit id="u01" x="0" y="0" skinName="ReadyUnitSkin"/>
+		<app:ReadyUnit id="u02" x="77" y="0" skinName="ReadyUnitSkin"/>
+		<app:ReadyUnit id="u03" x="154" y="0" skinName="ReadyUnitSkin"/>
+		<app:ReadyUnit id="u04" x="231" y="0" skinName="ReadyUnitSkin"/>
+		<app:ReadyUnit id="u05" x="308" y="0" skinName="ReadyUnitSkin"/>
+		<app:ReadyUnit id="u06" x="385" y="0" skinName="ReadyUnitSkin"/>
+		<app:ReadyUnit id="u07" x="462" y="0" skinName="ReadyUnitSkin"/>
+		<app:ReadyUnit id="u08" x="539" y="0" skinName="ReadyUnitSkin"/>
+	</e:Group>
+	<e:Group id="group1" width="617" height="85" x="108.97" y="203" anchorOffsetX="0">
+		<e:Image source="img_baitiao_png" bottom="0" left="0" right="0"/>
+		<e:Image id="img1" source="img_toumingxiangzi_png" x="-96" y="11" width="64" height="32"/>
+		<app:ReadyUnit id="u09" x="0" y="0" skinName="ReadyUnitSkin"/>
+		<app:ReadyUnit id="u10" x="77" y="0" skinName="ReadyUnitSkin"/>
+		<app:ReadyUnit id="u11" x="154" y="0" skinName="ReadyUnitSkin"/>
+		<app:ReadyUnit id="u12" x="231" y="0" skinName="ReadyUnitSkin"/>
+		<app:ReadyUnit id="u13" x="308" y="0" skinName="ReadyUnitSkin"/>
+		<app:ReadyUnit id="u14" x="385" y="0" skinName="ReadyUnitSkin"/>
+		<app:ReadyUnit id="u15" x="462" y="0" skinName="ReadyUnitSkin"/>
+		<app:ReadyUnit id="u16" x="539" y="0" skinName="ReadyUnitSkin"/>
+	</e:Group>
+</e:Skin>
