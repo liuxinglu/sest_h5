@@ -4,8 +4,11 @@ return:{code:"getNewUserStatus",data:[{userId:'', name:'', sex:0女|1男, avatar
 2. startCook() //轮询获取开始加工哪个用户哪道菜 返回用户列表 没有则[]
 return:{code:"startCook", data:[{userId:'', cookId:'', foodType:0}, ...]}
 
-3. endCook() //轮询获取哪个用户的哪个餐品加工完毕 放到几号位置
-return:{code:"endCook", data:[{userId:'', cookId:'', siteNum:0}, ...]}
+3. endCook() //轮询获取哪个用户的哪个餐品加工完毕 放到几号打包位 没有则[]
+return:{code:"endCook", data:[{userId:'', cookId:'', packNum:0}, ...]}
 
-4. getFood() //轮询获取哪个放餐位置空了 
+4.getPack() //轮询获取将几号打包位的菜放到哪个放餐位置上 没有则[]
+return:{code:"getPack", data:[{packNum:0, siteNum:0}, ...]}
+
+5. getFood() //轮询获取哪个放餐位置空了 没有则[]
 return:{code:"getFood", data:[siteNum, ...]}

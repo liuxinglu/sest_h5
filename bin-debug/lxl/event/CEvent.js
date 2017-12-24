@@ -85,6 +85,8 @@ var lxl;
     CEvent.REMOVE_FOOD = "CEVENT::REMOVE_FOOD";
     CEvent.REMOVE_SITE = "CEVENT::REMOVE_SITE";
     CEvent.MOVIE_COMPLETE = "CEVENT::MOVIE_COMPLETE";
+    CEvent.MAKE_COMPLETE_UP = "CEVENT::MAKE_COMPLETE_UP";
+    CEvent.MAKE_COMPLETE_DOWN = "CEVENT::MAKE_COMPLETE_DOWN";
     lxl.CEvent = CEvent;
     __reflect(CEvent.prototype, "lxl.CEvent");
 })(lxl || (lxl = {}));

@@ -27,6 +27,7 @@ var game_file_list = [
 	"bin-debug/app/sest/PackArea.js",
 	"bin-debug/app/sest/PackUnit.js",
 	"bin-debug/app/sest/ReadyArea.js",
+	"bin-debug/app/sest/ReadyUnit.js",
 	"bin-debug/app/sest/WaitArea.js",
 	"bin-debug/app/sest/WaitUnit.js",
 	"bin-debug/app/test.js",

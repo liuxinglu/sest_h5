@@ -8,22 +8,22 @@ var __extends = (this && this.__extends) || function (d, b) {
 };
 var app;
 (function (app) {
-    var ReadyArea = (function (_super) {
-        __extends(ReadyArea, _super);
-        function ReadyArea() {
-            var _this = _super.call(this, lxl.Config.SKIN_PATH + "ReadyAreaSkin.exml") || this;
-            _this._xPosArr = [0, 77, 154, 231, 308, 385, 462, 539];
+    var ReadyUnit = (function (_super) {
+        __extends(ReadyUnit, _super);
+        function ReadyUnit() {
+            var _this = _super.call(this, lxl.Config.SKIN_PATH + "ReadyUnitSkin.exml") || this;
+            _this.num = 0;
             return _this;
         }
-        ReadyArea.prototype.onActivity = function () {
+        ReadyUnit.prototype.onActivity = function () {
             _super.prototype.onActivity.call(this);
         };
-        ReadyArea.prototype.dispose = function () {
+        ReadyUnit.prototype.dispose = function () {
             _super.prototype.dispose.call(this);
         };
-        return ReadyArea;
+        return ReadyUnit;
     }(lxl.CComponent));
-    app.ReadyArea = ReadyArea;
-    __reflect(ReadyArea.prototype, "app.ReadyArea");
+    app.ReadyUnit = ReadyUnit;
+    __reflect(ReadyUnit.prototype, "app.ReadyUnit");
 })(app || (app = {}));
-//# sourceMappingURL=ReadyArea.js.map
+//# sourceMappingURL=ReadyUnit.js.map

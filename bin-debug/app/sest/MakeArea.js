@@ -59,6 +59,7 @@ var app;
             if (makeUnit.food.cookId == data.food.cookId) {
                 var pos = Gra.getNextPosByFood(makeUnit.food);
                 if (pos == -1) {
+                    this._showHandDown(makeUnit);
                 }
                 else {
                     egret.Tween.get(e.target)
@@ -69,6 +70,67 @@ var app;
                 }
             }
         };
+        MakeArea.prototype._showHandDown = function (mu) {
+            if (this._downMC) {
+                this._downMC.removeEventListener(egret.Event.COMPLETE, this._downComplete, this);
+                this.removeChild(this._downMC);
+                this._downMC = null;
+                this._downMu = null;
+            }
+            var n = Gra.getFoodName(mu.food.foodType);
+            this._downMC = Res.getMovieClip(n + "Down_json", n + "Down_png", n + "Down");
+            this._downMC.x = mu.x + mu.width / 2;
+            this._downMC.y = mu.y + mu.height;
+            this._downMC.addEventListener(egret.Event.COMPLETE, this._downComplete, this);
+            this.addChild(this._downMC);
+            this._downMu = mu;
+            this._downMC.play(1);
+        };
+        MakeArea.prototype._downComplete = function (e) {
+            this._showHandUp(this._downMu);
+        };
+        MakeArea.prototype._showHandUp = function (mu) {
+            var _this = this;
+            // let n = Gra.getFoodName(mu.food.foodType);
+            // this._upMC = Res.getMovieClip(n + "Up_json", n + "Up_png", n + "Up");
+            // this._upMC.x = mu.x + mu.width / 2;
+            // this._upMC.y = mu.y + mu.height + 70;
+            // this._upMC.addEventListener(egret.Event.COMPLETE, this._upComplete, this);
+            // this.addChild(this._upMC);
+            // this._upMC.stop();
+            var dis1 = 0;
+            var dis2 = 0;
+            if (mu.line == 0) {
+                dis1 = 800;
+                dis2 = 1200;
+            }
+            else {
+                dis1 = 800;
+                dis2 = 1000;
+            }
+            egret.Tween.get(mu)
+                .to({ y: -160 }, dis1)
+                .call(function () {
+                mu.visible = false;
+            }, mu);
+            egret.Tween.get(this._downMC)
+                .to({ y: -100 }, dis2)
+                .call(function () {
+                if (_this._downMC) {
+                    _this._downMC.removeEventListener(egret.Event.COMPLETE, _this._downComplete, _this);
+                    _this.removeChild(_this._downMC);
+                    _this._downMC = null;
+                }
+            });
+        };
+        // private _upComplete(e:egret.Event) {
+        // 	lxl.CDispatcher.getInstance().dispatch(new lxl.CEvent(lxl.CEvent.MAKE_COMPLETE_DOWN, this._downMu));
+        // 	if(this._upMC) {
+        // 		this._upMC.removeEventListener(egret.Event.COMPLETE, this._upComplete, this);
+        // 		// this.removeChild(this._upMC);
+        // 		// this._upMC = null;
+        // 	}
+        // }
         MakeArea.prototype.dispose = function () {
             _super.prototype.dispose.call(this);
         };

@@ -10,6 +10,8 @@ declare class PackUnit extends eui.Skin{
 }
 declare class ReadyAreaSkin extends eui.Skin{
 }
+declare class ReadyUnitSkin extends eui.Skin{
+}
 declare class WaitAreaSkin extends eui.Skin{
 }
 declare class WaitUnitSkin extends eui.Skin{

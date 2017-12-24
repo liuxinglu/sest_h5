@@ -49,7 +49,7 @@ module app {
 			if(makeUnit.food.cookId == data.food.cookId) {
 				let pos = Gra.getNextPosByFood(makeUnit.food);
 				if(pos == -1) {
-					
+					this._showHandDown(makeUnit);
 				} else {
 					egret.Tween.get(e.target)
 					.to({x:Gra.aniPosition[makeUnit.line][pos][0], y:Gra.aniPosition[makeUnit.line][pos][1]}, 2000)
@@ -59,6 +59,73 @@ module app {
 				}
 			}
 		}
+
+		private _downMC:egret.MovieClip;
+		private _downMu:MakeUnit;
+		private _showHandDown(mu:MakeUnit) {
+			if(this._downMC) {
+				this._downMC.removeEventListener(egret.Event.COMPLETE, this._downComplete, this);
+				this.removeChild(this._downMC);
+				this._downMC = null;
+				this._downMu = null;
+			}
+			let n = Gra.getFoodName(mu.food.foodType);
+			this._downMC = Res.getMovieClip(n + "Down_json", n + "Down_png", n + "Down");
+			this._downMC.x = mu.x + mu.width/2;
+			this._downMC.y = mu.y + mu.height;
+			this._downMC.addEventListener(egret.Event.COMPLETE, this._downComplete, this);
+			this.addChild(this._downMC);
+			this._downMu = mu;
+			this._downMC.play(1);
+		}
+
+		private _downComplete(e:egret.Event) {
+			
+			this._showHandUp(this._downMu);
+		}
+
+		private _upMC:egret.MovieClip;
+		private _showHandUp(mu:MakeUnit) {
+			// let n = Gra.getFoodName(mu.food.foodType);
+			// this._upMC = Res.getMovieClip(n + "Up_json", n + "Up_png", n + "Up");
+			// this._upMC.x = mu.x + mu.width / 2;
+			// this._upMC.y = mu.y + mu.height + 70;
+			// this._upMC.addEventListener(egret.Event.COMPLETE, this._upComplete, this);
+			// this.addChild(this._upMC);
+			// this._upMC.stop();
+			let dis1 = 0;
+			let dis2 = 0;
+			if(mu.line == 0) {
+				dis1 = 800;
+				dis2 = 1200;
+			} else {
+				dis1 = 800;
+				dis2 = 1000;
+			}
+			egret.Tween.get(mu)
+			.to({y: -160}, dis1)
+			.call(()=>{
+				mu.visible = false;
+			}, mu);
+			egret.Tween.get(this._downMC)
+			.to({y: -100}, dis2)
+			.call(()=>{
+				if(this._downMC) {
+					this._downMC.removeEventListener(egret.Event.COMPLETE, this._downComplete, this);
+					this.removeChild(this._downMC);
+					this._downMC = null;
+				}
+			});
+		}
+
+		// private _upComplete(e:egret.Event) {
+		// 	lxl.CDispatcher.getInstance().dispatch(new lxl.CEvent(lxl.CEvent.MAKE_COMPLETE_DOWN, this._downMu));
+		// 	if(this._upMC) {
+		// 		this._upMC.removeEventListener(egret.Event.COMPLETE, this._upComplete, this);
+		// 		// this.removeChild(this._upMC);
+		// 		// this._upMC = null;
+		// 	}
+		// }
 
 		dispose() {
 			super.dispose();

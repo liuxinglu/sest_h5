@@ -17,7 +17,7 @@ var app;
             _super.prototype.onActivity.call(this);
             this._mc = Res.getMovieClip("dabao_json", "dabao_png", "dabao");
             this._mc.addEventListener(egret.Event.COMPLETE, this._packComplete, this);
-            this.group.addChild(this._mc);
+            this.group.addChildAt(this._mc, 1);
         };
         PackUnit.prototype.pack = function () {
             this._mc.play(1);
@@ -26,7 +26,7 @@ var app;
             this._mc.removeEventListener(egret.Event.COMPLETE, this._packComplete, this);
             this._mcUp = Res.getMovieClip("dabaoDown_json", "dabaoDown_png", "dabaoDown");
             this._mcUp.addEventListener(egret.Event.COMPLETE, this._upComplete, this);
-            this.group.addChild(this._mcUp);
+            this.group.addChildAt(this._mcUp, 0);
             this._mcUp.play(1);
         };
         PackUnit.prototype._upComplete = function (e) {

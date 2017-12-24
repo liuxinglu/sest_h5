@@ -20,6 +20,7 @@
     "resource/app_skins/MakeAreaSkin.exml",
     "resource/app_skins/PackUnit.exml",
     "resource/app_skins/PackAreaSkin.exml",
+    "resource/app_skins/ReadyUnitSkin.exml",
     "resource/app_skins/ReadyAreaSkin.exml",
     "resource/app_skins/MainViewSkin.exml",
     "resource/app_skins/MakeUnitSkin.exml",

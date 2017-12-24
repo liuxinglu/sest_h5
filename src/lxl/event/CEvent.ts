@@ -56,6 +56,8 @@ module lxl {
 		public static REMOVE_FOOD:string = "CEVENT::REMOVE_FOOD";
 		public static REMOVE_SITE:string = "CEVENT::REMOVE_SITE";
 		public static MOVIE_COMPLETE:string = "CEVENT::MOVIE_COMPLETE";
+		public static MAKE_COMPLETE_UP:string = "CEVENT::MAKE_COMPLETE_UP";
+		public static MAKE_COMPLETE_DOWN:string = "CEVENT::MAKE_COMPLETE_DOWN";
 		private _param:any;
 		cancelBubble;
 		public constructor(type:string, param:any = null, timeSpan:number = 0, bubbles:boolean = false, cancelable:boolean = false)
