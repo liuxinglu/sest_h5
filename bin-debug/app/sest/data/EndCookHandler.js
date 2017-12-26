@@ -19,6 +19,10 @@ var app;
         EndCookHandler.prototype.handlerPackage = function (d) {
             _super.prototype.handlerPackage.call(this, d);
             var baseData = this.data.readObj();
+            var arr = baseData.data;
+            for (var i = 0; i < arr.length; i++) {
+                Gra.createSite(arr[i].userId, arr[i].cookId, arr[i].siteNum);
+            }
             this.handComplete();
         };
         EndCookHandler.prototype.send = function (p) {

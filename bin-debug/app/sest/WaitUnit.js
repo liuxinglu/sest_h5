@@ -33,7 +33,7 @@ var app;
         WaitUnit.prototype._disposeAnimation = function () {
             var _this = this;
             egret.Tween.get(this)
-                .to({ scaleX: 0.1, scaleY: 0.1, alpha: 0 }, 500)
+                .to({ scaleX: 0.1, scaleY: 0.1, alpha: 0 }, 700)
                 .call(function () {
                 _super.prototype.dispose.call(_this);
             }, this);

@@ -27,7 +27,7 @@ module app {
 
 		private _disposeAnimation():void {
 			egret.Tween.get(this)
-			.to({scaleX:0.1, scaleY: 0.1, alpha: 0}, 500)
+			.to({scaleX:0.1, scaleY: 0.1, alpha: 0}, 700)
 			.call(()=>{
 				super.dispose();
 			}, this);

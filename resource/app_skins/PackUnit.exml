@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <e:Skin class="PackUnit" width="183" height="141" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
 	<e:Group id="group" width="92" height="1" anchorOffsetY="0" bottom="0" right="0"/>
+	<e:Image id="img_head" source="head_jpg" x="75" y="82.5" width="32" height="32" visible="false"/>
+	<e:Image id="img_mask" source="img_touxiangquan_bg_png" x="75.5" y="82.5" width="32" height="32" visible="false"/>
 </e:Skin>

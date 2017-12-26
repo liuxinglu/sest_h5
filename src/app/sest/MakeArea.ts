@@ -31,11 +31,13 @@ module app {
 				if(makeUnit.line == 0) {
 					if(this.upArr[0].x != this._lastUpUnit.x && this.upArr[0].y != this._lastUpUnit.y) {
 						this._lastUpUnit = this.upArr.splice(0, 1)[0];
+						this._lastUpUnit.playAni(1);
 						this.addChild(this._lastUpUnit);
 					}
 				} else {
 					if(this.downArr[0].x != this._lastDownUnit.x && this.downArr[0].y != this._lastDownUnit.y) {
 						this._lastDownUnit = this.downArr.splice(0, 1)[0];
+						this._lastDownUnit.playAni(1);
 						this.addChild(this._lastDownUnit);
 					}
 				}
@@ -71,7 +73,8 @@ module app {
 			}
 			let n = Gra.getFoodName(mu.food.foodType);
 			this._downMC = Res.getMovieClip(n + "Down_json", n + "Down_png", n + "Down");
-			this._downMC.x = mu.x + mu.width/2;
+			let mc = mu.mcPos();
+			this._downMC.x = mu.x + mc.x + mc.width / 2 + 27;
 			this._downMC.y = mu.y + mu.height;
 			this._downMC.addEventListener(egret.Event.COMPLETE, this._downComplete, this);
 			this.addChild(this._downMC);
@@ -80,19 +83,11 @@ module app {
 		}
 
 		private _downComplete(e:egret.Event) {
-			
 			this._showHandUp(this._downMu);
 		}
 
 		private _upMC:egret.MovieClip;
 		private _showHandUp(mu:MakeUnit) {
-			// let n = Gra.getFoodName(mu.food.foodType);
-			// this._upMC = Res.getMovieClip(n + "Up_json", n + "Up_png", n + "Up");
-			// this._upMC.x = mu.x + mu.width / 2;
-			// this._upMC.y = mu.y + mu.height + 70;
-			// this._upMC.addEventListener(egret.Event.COMPLETE, this._upComplete, this);
-			// this.addChild(this._upMC);
-			// this._upMC.stop();
 			let dis1 = 0;
 			let dis2 = 0;
 			if(mu.line == 0) {
@@ -115,17 +110,9 @@ module app {
 					this.removeChild(this._downMC);
 					this._downMC = null;
 				}
+				lxl.CDispatcher.getInstance().dispatch(new lxl.CEvent(lxl.CEvent.MAKE_COMPLETE_DOWN, this._downMu));
 			});
 		}
-
-		// private _upComplete(e:egret.Event) {
-		// 	lxl.CDispatcher.getInstance().dispatch(new lxl.CEvent(lxl.CEvent.MAKE_COMPLETE_DOWN, this._downMu));
-		// 	if(this._upMC) {
-		// 		this._upMC.removeEventListener(egret.Event.COMPLETE, this._upComplete, this);
-		// 		// this.removeChild(this._upMC);
-		// 		// this._upMC = null;
-		// 	}
-		// }
 
 		dispose() {
 			super.dispose();

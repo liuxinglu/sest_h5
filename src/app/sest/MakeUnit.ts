@@ -12,6 +12,7 @@ module app {
 		food:Food;
 		line:number = 0;
 		subStep:number = -1;
+		index:number = 0;//第几个临时盒子
 
 		onActivity():void {
 			super.onActivity();
@@ -19,7 +20,14 @@ module app {
 			Res.getResByUrl(this.food.user.avatar, (e)=> {
 				this.img_head.texture = e.target.data;
 			}, this, egret.URLLoaderDataFormat.TEXTURE);
-			this.playAni(1);
+		}
+
+		mcPos():egret.MovieClip {
+			return this._mc;
+		}
+
+		groupPos():eui.Group {
+			return this.group;
 		}
 
 		playAni(num:number) {

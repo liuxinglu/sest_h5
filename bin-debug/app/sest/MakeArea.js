@@ -41,12 +41,14 @@ var app;
                 if (makeUnit.line == 0) {
                     if (_this.upArr[0].x != _this._lastUpUnit.x && _this.upArr[0].y != _this._lastUpUnit.y) {
                         _this._lastUpUnit = _this.upArr.splice(0, 1)[0];
+                        _this._lastUpUnit.playAni(1);
                         _this.addChild(_this._lastUpUnit);
                     }
                 }
                 else {
                     if (_this.downArr[0].x != _this._lastDownUnit.x && _this.downArr[0].y != _this._lastDownUnit.y) {
                         _this._lastDownUnit = _this.downArr.splice(0, 1)[0];
+                        _this._lastDownUnit.playAni(1);
                         _this.addChild(_this._lastDownUnit);
                     }
                 }
@@ -79,7 +81,8 @@ var app;
             }
             var n = Gra.getFoodName(mu.food.foodType);
             this._downMC = Res.getMovieClip(n + "Down_json", n + "Down_png", n + "Down");
-            this._downMC.x = mu.x + mu.width / 2;
+            var mc = mu.mcPos();
+            this._downMC.x = mu.x + mc.x + mc.width / 2 + 27;
             this._downMC.y = mu.y + mu.height;
             this._downMC.addEventListener(egret.Event.COMPLETE, this._downComplete, this);
             this.addChild(this._downMC);
@@ -91,13 +94,6 @@ var app;
         };
         MakeArea.prototype._showHandUp = function (mu) {
             var _this = this;
-            // let n = Gra.getFoodName(mu.food.foodType);
-            // this._upMC = Res.getMovieClip(n + "Up_json", n + "Up_png", n + "Up");
-            // this._upMC.x = mu.x + mu.width / 2;
-            // this._upMC.y = mu.y + mu.height + 70;
-            // this._upMC.addEventListener(egret.Event.COMPLETE, this._upComplete, this);
-            // this.addChild(this._upMC);
-            // this._upMC.stop();
             var dis1 = 0;
             var dis2 = 0;
             if (mu.line == 0) {
@@ -121,16 +117,9 @@ var app;
                     _this.removeChild(_this._downMC);
                     _this._downMC = null;
                 }
+                lxl.CDispatcher.getInstance().dispatch(new lxl.CEvent(lxl.CEvent.MAKE_COMPLETE_DOWN, _this._downMu));
             });
         };
-        // private _upComplete(e:egret.Event) {
-        // 	lxl.CDispatcher.getInstance().dispatch(new lxl.CEvent(lxl.CEvent.MAKE_COMPLETE_DOWN, this._downMu));
-        // 	if(this._upMC) {
-        // 		this._upMC.removeEventListener(egret.Event.COMPLETE, this._upComplete, this);
-        // 		// this.removeChild(this._upMC);
-        // 		// this._upMC = null;
-        // 	}
-        // }
         MakeArea.prototype.dispose = function () {
             _super.prototype.dispose.call(this);
         };

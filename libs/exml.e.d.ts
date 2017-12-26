@@ -4,13 +4,13 @@ declare class MakeAreaSkin extends eui.Skin{
 }
 declare class MakeUnitSkin extends eui.Skin{
 }
-declare class PackAreaSkin extends eui.Skin{
-}
 declare class PackUnit extends eui.Skin{
 }
 declare class ReadyAreaSkin extends eui.Skin{
 }
 declare class ReadyUnitSkin extends eui.Skin{
+}
+declare class TargetSkin extends eui.Skin{
 }
 declare class WaitAreaSkin extends eui.Skin{
 }

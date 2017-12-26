@@ -3,6 +3,10 @@
 		{
 			"keys": "checkbox_select_disabled_png,checkbox_select_down_png,checkbox_select_up_png,checkbox_unselect_png,selected_png,border_png,header_png,radiobutton_select_disabled_png,radiobutton_select_down_png,radiobutton_select_up_png,radiobutton_unselect_png,roundthumb_png,thumb_png,track_png,tracklight_png,handle_png,off_png,on_png,button_down_png,button_up_png,thumb_pb_png,track_pb_png,track_sb_png,bg_jpg,egret_icon_png,description_json,img_bg_dabao_png,img_bg_denghou_png,img_bg_qucan_png,img_bg_zhizuo_png,img_toumingxiangzi_png,img_touxiangquan_png,img_touxiangquan_bg_png,img_xiangzibianhuang_png,num_1_png,num_3_png,num_4_png,num_5_png,num_6_png,num_7_png,num_8_png,num_9_png,num_10_png,num_11_png,num_13_png,num_14_png,num_15_png,num_16_png,num_2_png,num_12_png,head_jpg,csd_png,gaijiaofan1_0_json,gaijiaofan1_0_png,gaijiaofan1_1_json,gaijiaofan1_1_png,gaijiaofan1_2_json,gaijiaofan1_2_png,gaijiaofan1_3_json,gaijiaofan1_3_png,gaijiaofan1_4_json,gaijiaofan1_4_png,gaijiaofan1_5_json,gaijiaofan1_5_png,panini3_0_json,panini3_0_png,panini3_1_json,panini3_1_png,yimian0_json,yimian0_png,yimian1_0_json,yimian1_0_png,yimian1_1_json,yimian1_1_png,yimian1_2_json,yimian1_2_png,yimian1_3_json,yimian1_3_png,yan_json,yan_png,head_bg_png,panini2_json,panini2_png,panini4_json,panini4_png,sela0_json,sela0_png,sela1_json,sela1_png,sela3_json,sela3_png,sela4_json,sela4_png,sela5_json,sela5_png,yimian2_json,yimian2_png,gaijiaofan0_json,gaijiaofan0_png,gaijiaofan2_json,gaijiaofan2_png,panini0_json,panini0_png,panini1_json,panini1_png,gaizhang_json,gaizhang_png,dabao_json,dabao_png,dabaoDown_json,dabaoDown_png,gaijiaofanDown_json,gaijiaofanDown_png,gaijiaofanUp_json,gaijiaofanUp_png,paniniDown_json,paniniDown_png,paniniUp_json,paniniUp_png,yimianDown_json,yimianDown_png,selaDown_json,selaDown_png,yimianUp_json,yimianUp_png,selaUp_json,selaUp_png,img_baitiao_png,img_guidao_1_png,img_guidao_2_png,img_zhuozi_png",
 			"name": "preload"
+		},
+		{
+			"keys": "boxbg_png",
+			"name": "main"
 		}
 	],
 	"resources": [
@@ -262,404 +266,409 @@
 			"name": "head_jpg"
 		},
 		{
-			"name": "csd_png",
+			"url": "assets/app/img/csd.png",
 			"type": "image",
-			"url": "assets/app/img/csd.png"
+			"name": "csd_png"
 		},
 		{
-			"name": "gaijiaofan1_0_json",
+			"url": "assets/app/ani/gaijiaofan1_0.json",
 			"type": "json",
-			"url": "assets/app/ani/gaijiaofan1_0.json"
+			"name": "gaijiaofan1_0_json"
 		},
 		{
-			"name": "gaijiaofan1_0_png",
+			"url": "assets/app/ani/gaijiaofan1_0.png",
 			"type": "image",
-			"url": "assets/app/ani/gaijiaofan1_0.png"
+			"name": "gaijiaofan1_0_png"
 		},
 		{
-			"name": "gaijiaofan1_1_json",
+			"url": "assets/app/ani/gaijiaofan1_1.json",
 			"type": "json",
-			"url": "assets/app/ani/gaijiaofan1_1.json"
+			"name": "gaijiaofan1_1_json"
 		},
 		{
-			"name": "gaijiaofan1_1_png",
+			"url": "assets/app/ani/gaijiaofan1_1.png",
 			"type": "image",
-			"url": "assets/app/ani/gaijiaofan1_1.png"
+			"name": "gaijiaofan1_1_png"
 		},
 		{
-			"name": "gaijiaofan1_2_json",
+			"url": "assets/app/ani/gaijiaofan1_2.json",
 			"type": "json",
-			"url": "assets/app/ani/gaijiaofan1_2.json"
+			"name": "gaijiaofan1_2_json"
 		},
 		{
-			"name": "gaijiaofan1_2_png",
+			"url": "assets/app/ani/gaijiaofan1_2.png",
 			"type": "image",
-			"url": "assets/app/ani/gaijiaofan1_2.png"
+			"name": "gaijiaofan1_2_png"
 		},
 		{
-			"name": "gaijiaofan1_3_json",
+			"url": "assets/app/ani/gaijiaofan1_3.json",
 			"type": "json",
-			"url": "assets/app/ani/gaijiaofan1_3.json"
+			"name": "gaijiaofan1_3_json"
 		},
 		{
-			"name": "gaijiaofan1_3_png",
+			"url": "assets/app/ani/gaijiaofan1_3.png",
 			"type": "image",
-			"url": "assets/app/ani/gaijiaofan1_3.png"
+			"name": "gaijiaofan1_3_png"
 		},
 		{
-			"name": "gaijiaofan1_4_json",
+			"url": "assets/app/ani/gaijiaofan1_4.json",
 			"type": "json",
-			"url": "assets/app/ani/gaijiaofan1_4.json"
+			"name": "gaijiaofan1_4_json"
 		},
 		{
-			"name": "gaijiaofan1_4_png",
+			"url": "assets/app/ani/gaijiaofan1_4.png",
 			"type": "image",
-			"url": "assets/app/ani/gaijiaofan1_4.png"
+			"name": "gaijiaofan1_4_png"
 		},
 		{
-			"name": "gaijiaofan1_5_json",
+			"url": "assets/app/ani/gaijiaofan1_5.json",
 			"type": "json",
-			"url": "assets/app/ani/gaijiaofan1_5.json"
+			"name": "gaijiaofan1_5_json"
 		},
 		{
-			"name": "gaijiaofan1_5_png",
+			"url": "assets/app/ani/gaijiaofan1_5.png",
 			"type": "image",
-			"url": "assets/app/ani/gaijiaofan1_5.png"
+			"name": "gaijiaofan1_5_png"
 		},
 		{
-			"name": "panini3_0_json",
+			"url": "assets/app/ani/panini3_0.json",
 			"type": "json",
-			"url": "assets/app/ani/panini3_0.json"
+			"name": "panini3_0_json"
 		},
 		{
-			"name": "panini3_0_png",
+			"url": "assets/app/ani/panini3_0.png",
 			"type": "image",
-			"url": "assets/app/ani/panini3_0.png"
+			"name": "panini3_0_png"
 		},
 		{
-			"name": "panini3_1_json",
+			"url": "assets/app/ani/panini3_1.json",
 			"type": "json",
-			"url": "assets/app/ani/panini3_1.json"
+			"name": "panini3_1_json"
 		},
 		{
-			"name": "panini3_1_png",
+			"url": "assets/app/ani/panini3_1.png",
 			"type": "image",
-			"url": "assets/app/ani/panini3_1.png"
+			"name": "panini3_1_png"
 		},
 		{
-			"name": "yimian0_json",
+			"url": "assets/app/ani/yimian0.json",
 			"type": "json",
-			"url": "assets/app/ani/yimian0.json"
+			"name": "yimian0_json"
 		},
 		{
-			"name": "yimian0_png",
+			"url": "assets/app/ani/yimian0.png",
 			"type": "image",
-			"url": "assets/app/ani/yimian0.png"
+			"name": "yimian0_png"
 		},
 		{
-			"name": "yimian1_0_json",
+			"url": "assets/app/ani/yimian1_0.json",
 			"type": "json",
-			"url": "assets/app/ani/yimian1_0.json"
+			"name": "yimian1_0_json"
 		},
 		{
-			"name": "yimian1_0_png",
+			"url": "assets/app/ani/yimian1_0.png",
 			"type": "image",
-			"url": "assets/app/ani/yimian1_0.png"
+			"name": "yimian1_0_png"
 		},
 		{
-			"name": "yimian1_1_json",
+			"url": "assets/app/ani/yimian1_1.json",
 			"type": "json",
-			"url": "assets/app/ani/yimian1_1.json"
+			"name": "yimian1_1_json"
 		},
 		{
-			"name": "yimian1_1_png",
+			"url": "assets/app/ani/yimian1_1.png",
 			"type": "image",
-			"url": "assets/app/ani/yimian1_1.png"
+			"name": "yimian1_1_png"
 		},
 		{
-			"name": "yimian1_2_json",
+			"url": "assets/app/ani/yimian1_2.json",
 			"type": "json",
-			"url": "assets/app/ani/yimian1_2.json"
+			"name": "yimian1_2_json"
 		},
 		{
-			"name": "yimian1_2_png",
+			"url": "assets/app/ani/yimian1_2.png",
 			"type": "image",
-			"url": "assets/app/ani/yimian1_2.png"
+			"name": "yimian1_2_png"
 		},
 		{
-			"name": "yimian1_3_json",
+			"url": "assets/app/ani/yimian1_3.json",
 			"type": "json",
-			"url": "assets/app/ani/yimian1_3.json"
+			"name": "yimian1_3_json"
 		},
 		{
-			"name": "yimian1_3_png",
+			"url": "assets/app/ani/yimian1_3.png",
 			"type": "image",
-			"url": "assets/app/ani/yimian1_3.png"
+			"name": "yimian1_3_png"
 		},
 		{
-			"name": "yan_json",
+			"url": "assets/app/ani/yan.json",
 			"type": "json",
-			"url": "assets/app/ani/yan.json"
+			"name": "yan_json"
 		},
 		{
-			"name": "yan_png",
+			"url": "assets/app/ani/yan.png",
 			"type": "image",
-			"url": "assets/app/ani/yan.png"
+			"name": "yan_png"
 		},
 		{
-			"name": "head_bg_png",
+			"url": "assets/app/img/head_bg.png",
 			"type": "image",
-			"url": "assets/app/img/head_bg.png"
+			"name": "head_bg_png"
 		},
 		{
-			"name": "panini2_json",
+			"url": "assets/app/ani/panini2.json",
 			"type": "json",
-			"url": "assets/app/ani/panini2.json"
+			"name": "panini2_json"
 		},
 		{
-			"name": "panini2_png",
+			"url": "assets/app/ani/panini2.png",
 			"type": "image",
-			"url": "assets/app/ani/panini2.png"
+			"name": "panini2_png"
 		},
 		{
-			"name": "panini4_json",
+			"url": "assets/app/ani/panini4.json",
 			"type": "json",
-			"url": "assets/app/ani/panini4.json"
+			"name": "panini4_json"
 		},
 		{
-			"name": "panini4_png",
+			"url": "assets/app/ani/panini4.png",
 			"type": "image",
-			"url": "assets/app/ani/panini4.png"
+			"name": "panini4_png"
 		},
 		{
-			"name": "sela0_json",
+			"url": "assets/app/ani/sela0.json",
 			"type": "json",
-			"url": "assets/app/ani/sela0.json"
+			"name": "sela0_json"
 		},
 		{
-			"name": "sela0_png",
+			"url": "assets/app/ani/sela0.png",
 			"type": "image",
-			"url": "assets/app/ani/sela0.png"
+			"name": "sela0_png"
 		},
 		{
-			"name": "sela1_json",
+			"url": "assets/app/ani/sela1.json",
 			"type": "json",
-			"url": "assets/app/ani/sela1.json"
+			"name": "sela1_json"
 		},
 		{
-			"name": "sela1_png",
+			"url": "assets/app/ani/sela1.png",
 			"type": "image",
-			"url": "assets/app/ani/sela1.png"
+			"name": "sela1_png"
 		},
 		{
-			"name": "sela3_json",
+			"url": "assets/app/ani/sela3.json",
 			"type": "json",
-			"url": "assets/app/ani/sela3.json"
+			"name": "sela3_json"
 		},
 		{
-			"name": "sela3_png",
+			"url": "assets/app/ani/sela3.png",
 			"type": "image",
-			"url": "assets/app/ani/sela3.png"
+			"name": "sela3_png"
 		},
 		{
-			"name": "sela4_json",
+			"url": "assets/app/ani/sela4.json",
 			"type": "json",
-			"url": "assets/app/ani/sela4.json"
+			"name": "sela4_json"
 		},
 		{
-			"name": "sela4_png",
+			"url": "assets/app/ani/sela4.png",
 			"type": "image",
-			"url": "assets/app/ani/sela4.png"
+			"name": "sela4_png"
 		},
 		{
-			"name": "sela5_json",
+			"url": "assets/app/ani/sela5.json",
 			"type": "json",
-			"url": "assets/app/ani/sela5.json"
+			"name": "sela5_json"
 		},
 		{
-			"name": "sela5_png",
+			"url": "assets/app/ani/sela5.png",
 			"type": "image",
-			"url": "assets/app/ani/sela5.png"
+			"name": "sela5_png"
 		},
 		{
-			"name": "yimian2_json",
+			"url": "assets/app/ani/yimian2.json",
 			"type": "json",
-			"url": "assets/app/ani/yimian2.json"
+			"name": "yimian2_json"
 		},
 		{
-			"name": "yimian2_png",
+			"url": "assets/app/ani/yimian2.png",
 			"type": "image",
-			"url": "assets/app/ani/yimian2.png"
+			"name": "yimian2_png"
 		},
 		{
-			"name": "gaijiaofan0_json",
+			"url": "assets/app/ani/gaijiaofan0.json",
 			"type": "json",
-			"url": "assets/app/ani/gaijiaofan0.json"
+			"name": "gaijiaofan0_json"
 		},
 		{
-			"name": "gaijiaofan0_png",
+			"url": "assets/app/ani/gaijiaofan0.png",
 			"type": "image",
-			"url": "assets/app/ani/gaijiaofan0.png"
+			"name": "gaijiaofan0_png"
 		},
 		{
-			"name": "gaijiaofan2_json",
+			"url": "assets/app/ani/gaijiaofan2.json",
 			"type": "json",
-			"url": "assets/app/ani/gaijiaofan2.json"
+			"name": "gaijiaofan2_json"
 		},
 		{
-			"name": "gaijiaofan2_png",
+			"url": "assets/app/ani/gaijiaofan2.png",
 			"type": "image",
-			"url": "assets/app/ani/gaijiaofan2.png"
+			"name": "gaijiaofan2_png"
 		},
 		{
-			"name": "panini0_json",
+			"url": "assets/app/ani/panini0.json",
 			"type": "json",
-			"url": "assets/app/ani/panini0.json"
+			"name": "panini0_json"
 		},
 		{
-			"name": "panini0_png",
+			"url": "assets/app/ani/panini0.png",
 			"type": "image",
-			"url": "assets/app/ani/panini0.png"
+			"name": "panini0_png"
 		},
 		{
-			"name": "panini1_json",
+			"url": "assets/app/ani/panini1.json",
 			"type": "json",
-			"url": "assets/app/ani/panini1.json"
+			"name": "panini1_json"
 		},
 		{
-			"name": "panini1_png",
+			"url": "assets/app/ani/panini1.png",
 			"type": "image",
-			"url": "assets/app/ani/panini1.png"
+			"name": "panini1_png"
 		},
 		{
-			"name": "gaizhang_json",
+			"url": "assets/app/ani/gaizhang.json",
 			"type": "json",
-			"url": "assets/app/ani/gaizhang.json"
+			"name": "gaizhang_json"
 		},
 		{
-			"name": "gaizhang_png",
+			"url": "assets/app/ani/gaizhang.png",
 			"type": "image",
-			"url": "assets/app/ani/gaizhang.png"
+			"name": "gaizhang_png"
 		},
 		{
-			"name": "dabao_json",
+			"url": "assets/app/ani/dabao.json",
 			"type": "json",
-			"url": "assets/app/ani/dabao.json"
+			"name": "dabao_json"
 		},
 		{
-			"name": "dabao_png",
+			"url": "assets/app/ani/dabao.png",
 			"type": "image",
-			"url": "assets/app/ani/dabao.png"
+			"name": "dabao_png"
 		},
 		{
-			"name": "dabaoDown_json",
+			"url": "assets/app/ani/dabaoDown.json",
 			"type": "json",
-			"url": "assets/app/ani/dabaoDown.json"
+			"name": "dabaoDown_json"
 		},
 		{
-			"name": "dabaoDown_png",
+			"url": "assets/app/ani/dabaoDown.png",
 			"type": "image",
-			"url": "assets/app/ani/dabaoDown.png"
+			"name": "dabaoDown_png"
 		},
 		{
-			"name": "gaijiaofanDown_json",
+			"url": "assets/app/ani/gaijiaofanDown.json",
 			"type": "json",
-			"url": "assets/app/ani/gaijiaofanDown.json"
+			"name": "gaijiaofanDown_json"
 		},
 		{
-			"name": "gaijiaofanDown_png",
+			"url": "assets/app/ani/gaijiaofanDown.png",
 			"type": "image",
-			"url": "assets/app/ani/gaijiaofanDown.png"
+			"name": "gaijiaofanDown_png"
 		},
 		{
-			"name": "gaijiaofanUp_json",
+			"url": "assets/app/ani/gaijiaofanUp.json",
 			"type": "json",
-			"url": "assets/app/ani/gaijiaofanUp.json"
+			"name": "gaijiaofanUp_json"
 		},
 		{
-			"name": "gaijiaofanUp_png",
+			"url": "assets/app/ani/gaijiaofanUp.png",
 			"type": "image",
-			"url": "assets/app/ani/gaijiaofanUp.png"
+			"name": "gaijiaofanUp_png"
 		},
 		{
-			"name": "paniniDown_json",
+			"url": "assets/app/ani/paniniDown.json",
 			"type": "json",
-			"url": "assets/app/ani/paniniDown.json"
+			"name": "paniniDown_json"
 		},
 		{
-			"name": "paniniDown_png",
+			"url": "assets/app/ani/paniniDown.png",
 			"type": "image",
-			"url": "assets/app/ani/paniniDown.png"
+			"name": "paniniDown_png"
 		},
 		{
-			"name": "paniniUp_json",
+			"url": "assets/app/ani/paniniUp.json",
 			"type": "json",
-			"url": "assets/app/ani/paniniUp.json"
+			"name": "paniniUp_json"
 		},
 		{
-			"name": "paniniUp_png",
+			"url": "assets/app/ani/paniniUp.png",
 			"type": "image",
-			"url": "assets/app/ani/paniniUp.png"
+			"name": "paniniUp_png"
 		},
 		{
-			"name": "yimianDown_json",
+			"url": "assets/app/ani/yimianDown.json",
 			"type": "json",
-			"url": "assets/app/ani/yimianDown.json"
+			"name": "yimianDown_json"
 		},
 		{
-			"name": "yimianDown_png",
+			"url": "assets/app/ani/yimianDown.png",
 			"type": "image",
-			"url": "assets/app/ani/yimianDown.png"
+			"name": "yimianDown_png"
 		},
 		{
-			"name": "selaDown_json",
+			"url": "assets/app/ani/selaDown.json",
 			"type": "json",
-			"url": "assets/app/ani/selaDown.json"
+			"name": "selaDown_json"
 		},
 		{
-			"name": "selaDown_png",
+			"url": "assets/app/ani/selaDown.png",
 			"type": "image",
-			"url": "assets/app/ani/selaDown.png"
+			"name": "selaDown_png"
 		},
 		{
-			"name": "yimianUp_json",
+			"url": "assets/app/ani/yimianUp.json",
 			"type": "json",
-			"url": "assets/app/ani/yimianUp.json"
+			"name": "yimianUp_json"
 		},
 		{
-			"name": "yimianUp_png",
+			"url": "assets/app/ani/yimianUp.png",
 			"type": "image",
-			"url": "assets/app/ani/yimianUp.png"
+			"name": "yimianUp_png"
 		},
 		{
-			"name": "selaUp_json",
+			"url": "assets/app/ani/selaUp.json",
 			"type": "json",
-			"url": "assets/app/ani/selaUp.json"
+			"name": "selaUp_json"
 		},
 		{
-			"name": "selaUp_png",
+			"url": "assets/app/ani/selaUp.png",
 			"type": "image",
-			"url": "assets/app/ani/selaUp.png"
+			"name": "selaUp_png"
 		},
 		{
-			"name": "img_baitiao_png",
+			"url": "assets/app/img/img_baitiao.png",
 			"type": "image",
-			"url": "assets/app/img/img_baitiao.png"
+			"name": "img_baitiao_png"
 		},
 		{
-			"name": "img_guidao_1_png",
+			"url": "assets/app/img/img_guidao_1.png",
 			"type": "image",
-			"url": "assets/app/img/img_guidao_1.png"
+			"name": "img_guidao_1_png"
 		},
 		{
-			"name": "img_guidao_2_png",
+			"url": "assets/app/img/img_guidao_2.png",
 			"type": "image",
-			"url": "assets/app/img/img_guidao_2.png"
+			"name": "img_guidao_2_png"
 		},
 		{
-			"name": "img_zhuozi_png",
+			"url": "assets/app/img/img_zhuozi.png",
 			"type": "image",
-			"url": "assets/app/img/img_zhuozi.png"
+			"name": "img_zhuozi_png"
+		},
+		{
+			"url": "assets/app/img/boxbg.png",
+			"type": "image",
+			"name": "boxbg_png"
 		}
 	]
 }

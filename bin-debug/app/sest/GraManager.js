@@ -40,15 +40,6 @@ var app;
             }
             return user;
         };
-        GraManager.prototype.findFoodById = function (cookId) {
-            var food = new app.Food();
-            for (var i = 0; i < this._foods.length; i++) {
-                if (this._foods[i].cookId == cookId) {
-                    food = this._foods[i];
-                }
-            }
-            return food;
-        };
         GraManager.prototype.createFood = function (userId, cookId, foodType) {
             var food = new app.Food();
             food.cookId = cookId;
@@ -60,6 +51,15 @@ var app;
             lxl.CDispatcher.getInstance().dispatch(new lxl.CEvent(lxl.CEvent.NEW_FOOD, food));
             return food;
         };
+        GraManager.prototype.findFoodById = function (cookId) {
+            var food = new app.Food();
+            for (var i = 0; i < this._foods.length; i++) {
+                if (this._foods[i].cookId == cookId) {
+                    food = this._foods[i];
+                }
+            }
+            return food;
+        };
         GraManager.prototype.removeFood = function (userId, cookId, siteNum) {
             for (var i = 0; i < this._foods.length; i++) {
                 if (this._foods[i].cookId == cookId) {
@@ -69,11 +69,28 @@ var app;
         };
         GraManager.prototype.createSite = function (userId, cookId, siteNum) {
             var site = new app.Site();
-            site.user = this.findUserById(userId);
             site.food = this.findFoodById(cookId);
             site.siteNum = siteNum;
             this._sites.push(site);
+            lxl.CDispatcher.getInstance().dispatch(new lxl.CEvent(lxl.CEvent.NEW_SITE, site));
             return site;
+        };
+        GraManager.prototype.findSiteByFood = function (food) {
+            var site;
+            for (var i = 0; i < this._sites.length; i++) {
+                if (this._sites[i].food.cookId == food.cookId) {
+                    site = this._sites[i];
+                }
+            }
+            return site;
+        };
+        GraManager.prototype.removeSiteByFood = function (food) {
+            for (var i = 0; i < this._sites.length; i++) {
+                if (this._sites[i].food.cookId == food.cookId) {
+                    this._sites.splice(i, 1);
+                    break;
+                }
+            }
         };
         GraManager.prototype.getTotalStep = function (foodType) {
             var arr = this._aniShowSeques[foodType];

@@ -18,18 +18,75 @@ var app;
             this._mc = Res.getMovieClip("dabao_json", "dabao_png", "dabao");
             this._mc.addEventListener(egret.Event.COMPLETE, this._packComplete, this);
             this.group.addChildAt(this._mc, 1);
+            this.img_head.mask = this.img_mask;
         };
         PackUnit.prototype.pack = function () {
+            this._mc.visible = true;
             this._mc.play(1);
         };
         PackUnit.prototype._packComplete = function (e) {
             this._mc.removeEventListener(egret.Event.COMPLETE, this._packComplete, this);
+            this.gaizhang();
+        };
+        PackUnit.prototype.gaizhang = function () {
+            this._mcGaiZhang = Res.getMovieClip("gaizhang_json", "gaizhang_png", "gaizhang");
+            this._mcGaiZhang.x = 20;
+            if (this.makeUnit.index <= 3) {
+                this._mcGaiZhang.y = this._mcGaiZhang.height * 2 + this.y - this.height + 70;
+            }
+            else {
+                this._mcGaiZhang.y = this._mcGaiZhang.height * 2 + this.y - this.height - 90;
+            }
+            this.group.addChild(this._mcGaiZhang);
+            this._mcGaiZhang.addEventListener(egret.Event.COMPLETE, this._gaizhangComplete, this);
+            this._mcGaiZhang.play(1);
+            setTimeout(this._gaizhang1, 1700, this);
+        };
+        PackUnit.prototype._gaizhang1 = function (arg) {
+            arg.img_head.visible = true;
+            Res.getResByUrl(arg.makeUnit.food.user.avatar, function (e) {
+                arg.img_head.texture = e.target.data;
+            }, arg, egret.URLLoaderDataFormat.TEXTURE);
+        };
+        PackUnit.prototype._gaizhangComplete = function (e) {
+            this._mcGaiZhang.removeEventListener(egret.Event.COMPLETE, this._gaizhangComplete, this);
+            this.group.removeChild(this._mcGaiZhang);
+        };
+        PackUnit.prototype.packup = function () {
             this._mcUp = Res.getMovieClip("dabaoDown_json", "dabaoDown_png", "dabaoDown");
             this._mcUp.addEventListener(egret.Event.COMPLETE, this._upComplete, this);
-            this.group.addChildAt(this._mcUp, 0);
+            this.group.addChild(this._mcUp);
             this._mcUp.play(1);
         };
         PackUnit.prototype._upComplete = function (e) {
+            this._mcUp.removeEventListener(egret.Event.COMPLETE, this._upComplete, this);
+            this._originX = this.x;
+            this._originY = this.y;
+            lxl.CDispatcher.getInstance().dispatch(new lxl.CEvent(lxl.CEvent.PACK_COMPLETE, this));
+        };
+        PackUnit.prototype.removeQianZi = function () {
+            var dis1 = 0;
+            var dis2 = 0;
+            if (this.makeUnit.line == 0) {
+                dis1 = 800;
+                dis2 = 1200;
+            }
+            else {
+                dis1 = 800;
+                dis2 = 1000;
+            }
+            egret.Tween.get(this._mcUp)
+                .to({ y: -100 }, dis2)
+                .call(function () {
+                if (this._mcUp) {
+                    this.group.removeChild(this._mcUp);
+                    this._mcUp = null;
+                }
+                //this.getBox();
+            });
+        };
+        PackUnit.prototype.getBox = function () {
+            this._mc.gotoAndStop(1);
         };
         PackUnit.prototype.dispose = function () {
             _super.prototype.dispose.call(this);

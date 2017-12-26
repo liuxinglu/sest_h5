@@ -15,6 +15,7 @@ var app;
             _this._hasSubArr = ["gaijiaofan1_5", "panini3_1", "yimian1_3"];
             _this.line = 0;
             _this.subStep = -1;
+            _this.index = 0; //第几个临时盒子
             return _this;
         }
         MakeUnit.prototype.onActivity = function () {
@@ -24,7 +25,12 @@ var app;
             Res.getResByUrl(this.food.user.avatar, function (e) {
                 _this.img_head.texture = e.target.data;
             }, this, egret.URLLoaderDataFormat.TEXTURE);
-            this.playAni(1);
+        };
+        MakeUnit.prototype.mcPos = function () {
+            return this._mc;
+        };
+        MakeUnit.prototype.groupPos = function () {
+            return this.group;
         };
         MakeUnit.prototype.playAni = function (num) {
             for (var i = 0; i < this._hasSubArr.length; i++) {

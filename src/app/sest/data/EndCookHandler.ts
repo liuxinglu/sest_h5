@@ -11,6 +11,10 @@ module app {
 		handlerPackage(d:lxl.data.BaseData) {
 			super.handlerPackage(d);
 			let baseData = this.data.readObj();
+			let arr = baseData.data;
+			for(let i = 0; i < arr.length; i++) {
+				Gra.createSite(arr[i].userId, arr[i].cookId, arr[i].siteNum);
+			}
 			this.handComplete();
 		}
 

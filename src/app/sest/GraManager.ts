@@ -39,16 +39,6 @@ module app {
 			return user;
 		}
 
-		findFoodById(cookId:string):Food {
-			let food:Food = new Food();
-			for(let i = 0; i < this._foods.length; i++) {
-				if(this._foods[i].cookId == cookId) {
-					food = this._foods[i];
-				}
-			}
-			return food;
-		}
-		
 		createFood(userId:string, cookId:string, foodType:number):Food {
 			let food:Food = new Food();
 			food.cookId = cookId;
@@ -57,7 +47,17 @@ module app {
 			food.totalStep = this.getTotalStep(foodType);
 			this._foods.push(food);
 			lxl.CDispatcher.getInstance().dispatch(new lxl.CEvent(lxl.CEvent.REMOVE_USER, food.user));
-			lxl.CDispatcher.getInstance().dispatch(new lxl.CEvent(lxl.CEvent.NEW_FOOD, food))
+			lxl.CDispatcher.getInstance().dispatch(new lxl.CEvent(lxl.CEvent.NEW_FOOD, food));
+			return food;
+		}
+
+		findFoodById(cookId:string):Food {
+			let food:Food = new Food();
+			for(let i = 0; i < this._foods.length; i++) {
+				if(this._foods[i].cookId == cookId) {
+					food = this._foods[i];
+				}
+			}
 			return food;
 		}
 
@@ -69,13 +69,32 @@ module app {
 			}
 		}
 
-		createSite(userId:string, cookId:string, siteNum:number):Site {
+		createSite(userId:string, cookId:string, siteNum:string):Site {
 			let site:Site = new Site();
-			site.user = this.findUserById(userId);
 			site.food = this.findFoodById(cookId);
 			site.siteNum = siteNum;
 			this._sites.push(site);
+			lxl.CDispatcher.getInstance().dispatch(new lxl.CEvent(lxl.CEvent.NEW_SITE, site));
 			return site;
+		}
+
+		findSiteByFood(food:Food):Site {
+			let site;
+			for(let i = 0; i < this._sites.length; i++) {
+				if(this._sites[i].food.cookId == food.cookId) {
+					site = this._sites[i];
+				}
+			}
+			return site;
+		}
+
+		removeSiteByFood(food:Food) {
+			for(let i = 0; i < this._sites.length; i++) {
+				if(this._sites[i].food.cookId == food.cookId) {
+					this._sites.splice(i, 1);
+					break;
+				}
+			}
 		}
 
 		getTotalStep(foodType:number):number {

@@ -5,7 +5,7 @@ var app;
 (function (app) {
     var Site = (function () {
         function Site() {
-            this.siteNum = 0;
+            this.siteNum = "";
         }
         return Site;
     }());

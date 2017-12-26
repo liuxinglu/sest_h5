@@ -3,5 +3,5 @@
 	<e:Image id="img_head" source="head_jpg" anchorOffsetX="0" width="50" anchorOffsetY="0" height="50" bottom="41" left="0"/>
 	<e:Image source="head_bg_png" bottom="0" left="0"/>
 	<e:Image id="img_mask" source="img_touxiangquan_bg_png" width="50" height="50" left="0" bottom="41" visible="false"/>
-	<e:Group id="group" width="97" height="1" x="105" anchorOffsetX="0" anchorOffsetY="0" bottom="0"/>
+	<e:Group id="group" width="97" height="1" anchorOffsetX="0" anchorOffsetY="0" bottom="0" x="105"/>
 </e:Skin>
