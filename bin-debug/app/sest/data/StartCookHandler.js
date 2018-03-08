@@ -21,7 +21,7 @@ var app;
             var baseData = this.data.readObj();
             var arr = baseData.data;
             for (var i = 0; i < arr.length; i++) {
-                Gra.createFood(arr[i].userId, arr[i].cookId, parseInt(arr[i].foodType));
+                Gra.createFood(arr[i].userId, "201712151909031499", parseInt(arr[i].foodType)); //arr[i].cookId
             }
             this.handComplete();
         };

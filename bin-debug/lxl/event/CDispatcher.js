@@ -21,7 +21,8 @@ var lxl;
         CDispatcher.prototype.addListener = function (type, listener, ctx, useCapture, priority) {
             if (useCapture === void 0) { useCapture = false; }
             if (priority === void 0) { priority = 0; }
-            this.addEventListener(type, listener, ctx, useCapture, priority);
+            if (!this.hasListener(type))
+                this.addEventListener(type, listener, ctx, useCapture, priority);
         };
         CDispatcher.prototype.removeListener = function (type, listener, ctx, useCapture) {
             if (useCapture === void 0) { useCapture = false; }

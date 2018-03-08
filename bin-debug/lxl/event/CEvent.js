@@ -88,6 +88,7 @@ var lxl;
     CEvent.MAKE_COMPLETE_UP = "CEVENT::MAKE_COMPLETE_UP";
     CEvent.MAKE_COMPLETE_DOWN = "CEVENT::MAKE_COMPLETE_DOWN";
     CEvent.PACK_COMPLETE = "CEVENT::PACK_COMPLETE";
+    CEvent.GAIZHANG_COMPLETE = "CEVENT::GAIZHANG_COMPLETE";
     lxl.CEvent = CEvent;
     __reflect(CEvent.prototype, "lxl.CEvent");
 })(lxl || (lxl = {}));

@@ -40,14 +40,15 @@ module app {
 		onActivity() {
 			super.onActivity();
 			lxl.CDispatcher.getInstance().addListener(lxl.CEvent.MAKE_COMPLETE_DOWN, this._makeComplete, this);
-			lxl.CDispatcher.getInstance().addListener(lxl.CEvent.NEW_SITE, this._newSiteHandler, this);
+			
 			lxl.CDispatcher.getInstance().addListener(lxl.CEvent.PACK_COMPLETE, this._packCompleteHandler, this);
+			lxl.CDispatcher.getInstance().addListener(lxl.CEvent.GAIZHANG_COMPLETE, this._gaizhangHandler, this);
 			for(let i = 0; i < 16; i++) {
 				if(i < 9)
 					this["u0" + (i + 1)].num = i + 1;
 				else
 					this["u" + (i + 1)].num = i + 1;
-			} 
+			}
 		}
 
 		private _makeComplete(e:lxl.CEvent) {
@@ -103,6 +104,10 @@ module app {
 			}
 		}
 
+		private _gaizhangHandler(e:lxl.CEvent) {
+			lxl.CDispatcher.getInstance().addListener(lxl.CEvent.NEW_SITE, this._newSiteHandler, this);
+		}
+
 		private _imgArr:Array<Target> = [];
 		private _packCompleteHandler(e:lxl.CEvent) {
 			let pu:PackUnit = e.data;
@@ -122,8 +127,8 @@ module app {
 				case "06":
 				case "07":
 				case "08":
-				targetX = this.img0.x;
-				targetY = this.img0.y;
+				targetX = this.img0.x + this.group0.x;
+				targetY = this.img0.y + this.group0.y - this.img0.height;
 				targetW = this.img0.width;
 				targetH = this.img0.height;
 				targetIndex = 0;
@@ -136,30 +141,31 @@ module app {
 				case "14":
 				case "15":
 				case "16":
-				targetX = this.img1.x;
-				targetY = this.img1.y;
+				targetX = this.img1.x + this.group1.x;
+				targetY = this.img1.y + this.group1.y - this.img1.height;
 				targetW = this.img1.width;
 				targetH = this.img1.height;
 				targetIndex = 1;
 				break;
 			}
 			egret.Tween.get(e.data)
-			.to({x:targetX, y:targetY, width:targetW, height:targetH}, 1000)
+			.to({x:targetX, y:targetY - 20, scaleX:0.4, scaleY:0.55}, 1000)
 			.call(()=>{
 				let target:Target = new Target();
-				target.x = targetX;
-				target.y = targetY;
+				target.x = this["img" + targetIndex].x;
+				target.y = this["img" + targetIndex].y;
 				target.width = targetW;
 				target.height = targetH;
 				target.food = mu.food;
 				this._imgArr.push(target);
 				this["group" + targetIndex].addChildAt(target, 1);
 				e.data.removeQianZi();
-			}, this);
-			egret.Tween.get(this._imgArr[this._imgArr.length - 1])
-			.to({x:this._xPosArr[(parseInt(site.siteNum) - 1) % 8]}, 2000)
-			.call(()=>{
-				this["u" + site.siteNum]
+				e.data.getBox();
+				egret.Tween.get(this._imgArr[this._imgArr.length - 1])
+				.to({x:this._xPosArr[(parseInt(site.siteNum) - 1) % 8]}, 2000)
+				.call(()=>{
+					this["u" + site.siteNum].changeStatusImg();
+				}, this);
 			}, this);
 		}
 

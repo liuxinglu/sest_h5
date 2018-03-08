@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="TargetSkin" width="64" height="32" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Image source="boxbg_png" anchorOffsetX="0" anchorOffsetY="0" left="0" right="0" top="0" bottom="0"/>
+	<e:Image id="img_head" source="head_jpg" x="24" y="8" width="16" height="16"/>
+	<e:Image id="img_mask" source="img_touxiangquan_bg_png" x="24" y="8" width="16" height="16" visible="false"/>
+</e:Skin>

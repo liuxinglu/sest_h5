@@ -13,7 +13,8 @@ module lxl {
 		}
 
 		public addListener(type:string, listener:Function, ctx:any, useCapture:boolean = false, priority:number = 0):void{
-			this.addEventListener(type, listener, ctx, useCapture, priority);
+			if(!this.hasListener(type))
+				this.addEventListener(type, listener, ctx, useCapture, priority);
 		}
 		
 		public removeListener(type:string, listener:Function, ctx:any, useCapture:boolean = false):void{

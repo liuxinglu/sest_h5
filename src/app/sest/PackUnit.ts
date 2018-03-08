@@ -54,6 +54,7 @@ module app {
 		private _gaizhangComplete(e:egret.Event) {
 			this._mcGaiZhang.removeEventListener(egret.Event.COMPLETE, this._gaizhangComplete, this);
 			this.group.removeChild(this._mcGaiZhang);
+			lxl.CDispatcher.getInstance().dispatch(new lxl.CEvent(lxl.CEvent.GAIZHANG_COMPLETE, this));
 		}
 
 		packup() {
@@ -65,12 +66,17 @@ module app {
 
 		private _originX:number;
 		private _originY:number;
+		private _originW:number;
+		private _originH:number;
 		private _upComplete(e:egret.Event) {
-			this._mcUp.removeEventListener(egret.Event.COMPLETE, this._upComplete, this);
-			
-			this._originX = this.x;
-			this._originY = this.y;
-			lxl.CDispatcher.getInstance().dispatch(new lxl.CEvent(lxl.CEvent.PACK_COMPLETE, this))
+			if(this._mcUp) {
+				this._mcUp.removeEventListener(egret.Event.COMPLETE, this._upComplete, this);
+				this._originW = this.width;
+				this._originH = this.height;
+				this._originX = this.x;
+				this._originY = this.y;
+				lxl.CDispatcher.getInstance().dispatch(new lxl.CEvent(lxl.CEvent.PACK_COMPLETE, this))
+			}
 		}
 
 		removeQianZi() {
@@ -85,17 +91,25 @@ module app {
                 dis2 = 1000;
             }
             egret.Tween.get(this._mcUp)
-                .to({ y: -100 }, dis2)
+                .to({ y: -400 }, dis2)
                 .call(function () {
                 if (this._mcUp) {
                     this.group.removeChild(this._mcUp);
                     this._mcUp = null;
                 }
                 //this.getBox();
-            });
+            }, this);
 		}
 
 		getBox() {
+			this.x = this._originX;
+			this.y = this._originY - 400;
+			this.scaleX = 1;
+			this.scaleY = 1;
+			egret.Tween.get(this)
+				.to({y:this._originY}, 1000)
+				.call(()=>{
+				}, this);
 			this._mc.gotoAndStop(1);
 		}
 

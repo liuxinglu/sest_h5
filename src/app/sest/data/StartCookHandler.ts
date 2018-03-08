@@ -13,7 +13,7 @@ module app {
 			let baseData = this.data.readObj();
 			let arr = baseData.data;
 			for(let i = 0; i < arr.length; i++) {
-				Gra.createFood(arr[i].userId, arr[i].cookId, parseInt(arr[i].foodType));
+				Gra.createFood(arr[i].userId, "201712151909031499", parseInt(arr[i].foodType));//arr[i].cookId
 			}
 			this.handComplete();
 		}

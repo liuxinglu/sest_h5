@@ -11,7 +11,7 @@ var app;
             lxl.GlobalData.getInstance().dataManager.addDataHandler(new app.GetFoodHandler());
             setInterval(this.getNewUser, 3000);
             setInterval(this.startCook, 5000);
-            setInterval(this.endCook, 6000);
+            setInterval(this.endCook, 4000);
             setInterval(this.getFood, 7000);
         }
         SetDataHandler.setHandlers = function () {

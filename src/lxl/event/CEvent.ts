@@ -59,6 +59,7 @@ module lxl {
 		public static MAKE_COMPLETE_UP:string = "CEVENT::MAKE_COMPLETE_UP";
 		public static MAKE_COMPLETE_DOWN:string = "CEVENT::MAKE_COMPLETE_DOWN";
 		public static PACK_COMPLETE:string = "CEVENT::PACK_COMPLETE";
+		public static GAIZHANG_COMPLETE:string = "CEVENT::GAIZHANG_COMPLETE";
 		private _param:any;
 		cancelBubble;
 		public constructor(type:string, param:any = null, timeSpan:number = 0, bubbles:boolean = false, cancelable:boolean = false)

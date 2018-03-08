@@ -51,6 +51,7 @@ var app;
         PackUnit.prototype._gaizhangComplete = function (e) {
             this._mcGaiZhang.removeEventListener(egret.Event.COMPLETE, this._gaizhangComplete, this);
             this.group.removeChild(this._mcGaiZhang);
+            lxl.CDispatcher.getInstance().dispatch(new lxl.CEvent(lxl.CEvent.GAIZHANG_COMPLETE, this));
         };
         PackUnit.prototype.packup = function () {
             this._mcUp = Res.getMovieClip("dabaoDown_json", "dabaoDown_png", "dabaoDown");
@@ -59,10 +60,14 @@ var app;
             this._mcUp.play(1);
         };
         PackUnit.prototype._upComplete = function (e) {
-            this._mcUp.removeEventListener(egret.Event.COMPLETE, this._upComplete, this);
-            this._originX = this.x;
-            this._originY = this.y;
-            lxl.CDispatcher.getInstance().dispatch(new lxl.CEvent(lxl.CEvent.PACK_COMPLETE, this));
+            if (this._mcUp) {
+                this._mcUp.removeEventListener(egret.Event.COMPLETE, this._upComplete, this);
+                this._originW = this.width;
+                this._originH = this.height;
+                this._originX = this.x;
+                this._originY = this.y;
+                lxl.CDispatcher.getInstance().dispatch(new lxl.CEvent(lxl.CEvent.PACK_COMPLETE, this));
+            }
         };
         PackUnit.prototype.removeQianZi = function () {
             var dis1 = 0;
@@ -76,16 +81,24 @@ var app;
                 dis2 = 1000;
             }
             egret.Tween.get(this._mcUp)
-                .to({ y: -100 }, dis2)
+                .to({ y: -400 }, dis2)
                 .call(function () {
                 if (this._mcUp) {
                     this.group.removeChild(this._mcUp);
                     this._mcUp = null;
                 }
                 //this.getBox();
-            });
+            }, this);
         };
         PackUnit.prototype.getBox = function () {
+            this.x = this._originX;
+            this.y = this._originY - 400;
+            this.scaleX = 1;
+            this.scaleY = 1;
+            egret.Tween.get(this)
+                .to({ y: this._originY }, 1000)
+                .call(function () {
+            }, this);
             this._mc.gotoAndStop(1);
         };
         PackUnit.prototype.dispose = function () {

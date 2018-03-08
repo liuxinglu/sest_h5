@@ -1,0 +1,674 @@
+{
+	"groups": [
+		{
+			"keys": "checkbox_select_disabled_png,checkbox_select_down_png,checkbox_select_up_png,checkbox_unselect_png,selected_png,border_png,header_png,radiobutton_select_disabled_png,radiobutton_select_down_png,radiobutton_select_up_png,radiobutton_unselect_png,roundthumb_png,thumb_png,track_png,tracklight_png,handle_png,off_png,on_png,button_down_png,button_up_png,thumb_pb_png,track_pb_png,track_sb_png,bg_jpg,egret_icon_png,description_json,img_bg_dabao_png,img_bg_denghou_png,img_bg_qucan_png,img_bg_zhizuo_png,img_toumingxiangzi_png,img_touxiangquan_png,img_touxiangquan_bg_png,img_xiangzibianhuang_png,num_1_png,num_3_png,num_4_png,num_5_png,num_6_png,num_7_png,num_8_png,num_9_png,num_10_png,num_11_png,num_13_png,num_14_png,num_15_png,num_16_png,num_2_png,num_12_png,head_jpg,csd_png,gaijiaofan1_0_json,gaijiaofan1_0_png,gaijiaofan1_1_json,gaijiaofan1_1_png,gaijiaofan1_2_json,gaijiaofan1_2_png,gaijiaofan1_3_json,gaijiaofan1_3_png,gaijiaofan1_4_json,gaijiaofan1_4_png,gaijiaofan1_5_json,gaijiaofan1_5_png,panini3_0_json,panini3_0_png,panini3_1_json,panini3_1_png,yimian0_json,yimian0_png,yimian1_0_json,yimian1_0_png,yimian1_1_json,yimian1_1_png,yimian1_2_json,yimian1_2_png,yimian1_3_json,yimian1_3_png,yan_json,yan_png,head_bg_png,panini2_json,panini2_png,panini4_json,panini4_png,sela0_json,sela0_png,sela1_json,sela1_png,sela3_json,sela3_png,sela4_json,sela4_png,sela5_json,sela5_png,yimian2_json,yimian2_png,gaijiaofan0_json,gaijiaofan0_png,gaijiaofan2_json,gaijiaofan2_png,panini0_json,panini0_png,panini1_json,panini1_png,gaizhang_json,gaizhang_png,dabao_json,dabao_png,dabaoDown_json,dabaoDown_png,gaijiaofanDown_json,gaijiaofanDown_png,gaijiaofanUp_json,gaijiaofanUp_png,paniniDown_json,paniniDown_png,paniniUp_json,paniniUp_png,yimianDown_json,yimianDown_png,selaDown_json,selaDown_png,yimianUp_json,yimianUp_png,selaUp_json,selaUp_png,img_baitiao_png,img_guidao_1_png,img_guidao_2_png,img_zhuozi_png",
+			"name": "preload"
+		},
+		{
+			"keys": "boxbg_png",
+			"name": "main"
+		}
+	],
+	"resources": [
+		{
+			"url": "assets/CheckBox/checkbox_select_disabled.png",
+			"type": "image",
+			"name": "checkbox_select_disabled_png"
+		},
+		{
+			"url": "assets/CheckBox/checkbox_select_down.png",
+			"type": "image",
+			"name": "checkbox_select_down_png"
+		},
+		{
+			"url": "assets/CheckBox/checkbox_select_up.png",
+			"type": "image",
+			"name": "checkbox_select_up_png"
+		},
+		{
+			"url": "assets/CheckBox/checkbox_unselect.png",
+			"type": "image",
+			"name": "checkbox_unselect_png"
+		},
+		{
+			"url": "assets/ItemRenderer/selected.png",
+			"type": "image",
+			"name": "selected_png"
+		},
+		{
+			"url": "assets/Panel/border.png",
+			"type": "image",
+			"name": "border_png"
+		},
+		{
+			"url": "assets/Panel/header.png",
+			"type": "image",
+			"name": "header_png"
+		},
+		{
+			"url": "assets/RadioButton/radiobutton_select_disabled.png",
+			"type": "image",
+			"name": "radiobutton_select_disabled_png"
+		},
+		{
+			"url": "assets/RadioButton/radiobutton_select_down.png",
+			"type": "image",
+			"name": "radiobutton_select_down_png"
+		},
+		{
+			"url": "assets/RadioButton/radiobutton_select_up.png",
+			"type": "image",
+			"name": "radiobutton_select_up_png"
+		},
+		{
+			"url": "assets/RadioButton/radiobutton_unselect.png",
+			"type": "image",
+			"name": "radiobutton_unselect_png"
+		},
+		{
+			"url": "assets/ScrollBar/roundthumb.png",
+			"type": "image",
+			"name": "roundthumb_png"
+		},
+		{
+			"url": "assets/Slider/thumb.png",
+			"type": "image",
+			"name": "thumb_png"
+		},
+		{
+			"url": "assets/Slider/track.png",
+			"type": "image",
+			"name": "track_png"
+		},
+		{
+			"url": "assets/Slider/tracklight.png",
+			"type": "image",
+			"name": "tracklight_png"
+		},
+		{
+			"url": "assets/ToggleSwitch/handle.png",
+			"type": "image",
+			"name": "handle_png"
+		},
+		{
+			"url": "assets/ToggleSwitch/off.png",
+			"type": "image",
+			"name": "off_png"
+		},
+		{
+			"url": "assets/ToggleSwitch/on.png",
+			"type": "image",
+			"name": "on_png"
+		},
+		{
+			"url": "assets/Button/button_down.png",
+			"type": "image",
+			"name": "button_down_png"
+		},
+		{
+			"url": "assets/Button/button_up.png",
+			"type": "image",
+			"name": "button_up_png"
+		},
+		{
+			"url": "assets/ProgressBar/thumb_pb.png",
+			"type": "image",
+			"name": "thumb_pb_png"
+		},
+		{
+			"url": "assets/ProgressBar/track_pb.png",
+			"type": "image",
+			"name": "track_pb_png"
+		},
+		{
+			"url": "assets/ScrollBar/track_sb.png",
+			"type": "image",
+			"name": "track_sb_png"
+		},
+		{
+			"url": "assets/bg.jpg",
+			"type": "image",
+			"name": "bg_jpg"
+		},
+		{
+			"url": "assets/egret_icon.png",
+			"type": "image",
+			"name": "egret_icon_png"
+		},
+		{
+			"url": "config/description.json",
+			"type": "json",
+			"name": "description_json"
+		},
+		{
+			"url": "assets/app/img/img_bg_dabao.png",
+			"type": "image",
+			"name": "img_bg_dabao_png"
+		},
+		{
+			"url": "assets/app/img/img_bg_denghou.png",
+			"type": "image",
+			"name": "img_bg_denghou_png"
+		},
+		{
+			"url": "assets/app/img/img_bg_qucan.png",
+			"type": "image",
+			"name": "img_bg_qucan_png"
+		},
+		{
+			"url": "assets/app/img/img_bg_zhizuo.png",
+			"type": "image",
+			"name": "img_bg_zhizuo_png"
+		},
+		{
+			"url": "assets/app/img/img_toumingxiangzi.png",
+			"type": "image",
+			"name": "img_toumingxiangzi_png"
+		},
+		{
+			"url": "assets/app/img/img_touxiangquan.png",
+			"type": "image",
+			"name": "img_touxiangquan_png"
+		},
+		{
+			"url": "assets/app/img/img_touxiangquan_bg.png",
+			"type": "image",
+			"name": "img_touxiangquan_bg_png"
+		},
+		{
+			"url": "assets/app/img/img_xiangzibianhuang.png",
+			"type": "image",
+			"name": "img_xiangzibianhuang_png"
+		},
+		{
+			"url": "assets/app/img/num_1.png",
+			"type": "image",
+			"name": "num_1_png"
+		},
+		{
+			"url": "assets/app/img/num_3.png",
+			"type": "image",
+			"name": "num_3_png"
+		},
+		{
+			"url": "assets/app/img/num_4.png",
+			"type": "image",
+			"name": "num_4_png"
+		},
+		{
+			"url": "assets/app/img/num_5.png",
+			"type": "image",
+			"name": "num_5_png"
+		},
+		{
+			"url": "assets/app/img/num_6.png",
+			"type": "image",
+			"name": "num_6_png"
+		},
+		{
+			"url": "assets/app/img/num_7.png",
+			"type": "image",
+			"name": "num_7_png"
+		},
+		{
+			"url": "assets/app/img/num_8.png",
+			"type": "image",
+			"name": "num_8_png"
+		},
+		{
+			"url": "assets/app/img/num_9.png",
+			"type": "image",
+			"name": "num_9_png"
+		},
+		{
+			"url": "assets/app/img/num_10.png",
+			"type": "image",
+			"name": "num_10_png"
+		},
+		{
+			"url": "assets/app/img/num_11.png",
+			"type": "image",
+			"name": "num_11_png"
+		},
+		{
+			"url": "assets/app/img/num_13.png",
+			"type": "image",
+			"name": "num_13_png"
+		},
+		{
+			"url": "assets/app/img/num_14.png",
+			"type": "image",
+			"name": "num_14_png"
+		},
+		{
+			"url": "assets/app/img/num_15.png",
+			"type": "image",
+			"name": "num_15_png"
+		},
+		{
+			"url": "assets/app/img/num_16.png",
+			"type": "image",
+			"name": "num_16_png"
+		},
+		{
+			"url": "assets/app/img/num_2.png",
+			"type": "image",
+			"name": "num_2_png"
+		},
+		{
+			"url": "assets/app/img/num_12.png",
+			"type": "image",
+			"name": "num_12_png"
+		},
+		{
+			"url": "assets/app/img/head.jpg",
+			"type": "image",
+			"name": "head_jpg"
+		},
+		{
+			"url": "assets/app/img/csd.png",
+			"type": "image",
+			"name": "csd_png"
+		},
+		{
+			"url": "assets/app/ani/gaijiaofan1_0.json",
+			"type": "json",
+			"name": "gaijiaofan1_0_json"
+		},
+		{
+			"url": "assets/app/ani/gaijiaofan1_0.png",
+			"type": "image",
+			"name": "gaijiaofan1_0_png"
+		},
+		{
+			"url": "assets/app/ani/gaijiaofan1_1.json",
+			"type": "json",
+			"name": "gaijiaofan1_1_json"
+		},
+		{
+			"url": "assets/app/ani/gaijiaofan1_1.png",
+			"type": "image",
+			"name": "gaijiaofan1_1_png"
+		},
+		{
+			"url": "assets/app/ani/gaijiaofan1_2.json",
+			"type": "json",
+			"name": "gaijiaofan1_2_json"
+		},
+		{
+			"url": "assets/app/ani/gaijiaofan1_2.png",
+			"type": "image",
+			"name": "gaijiaofan1_2_png"
+		},
+		{
+			"url": "assets/app/ani/gaijiaofan1_3.json",
+			"type": "json",
+			"name": "gaijiaofan1_3_json"
+		},
+		{
+			"url": "assets/app/ani/gaijiaofan1_3.png",
+			"type": "image",
+			"name": "gaijiaofan1_3_png"
+		},
+		{
+			"url": "assets/app/ani/gaijiaofan1_4.json",
+			"type": "json",
+			"name": "gaijiaofan1_4_json"
+		},
+		{
+			"url": "assets/app/ani/gaijiaofan1_4.png",
+			"type": "image",
+			"name": "gaijiaofan1_4_png"
+		},
+		{
+			"url": "assets/app/ani/gaijiaofan1_5.json",
+			"type": "json",
+			"name": "gaijiaofan1_5_json"
+		},
+		{
+			"url": "assets/app/ani/gaijiaofan1_5.png",
+			"type": "image",
+			"name": "gaijiaofan1_5_png"
+		},
+		{
+			"url": "assets/app/ani/panini3_0.json",
+			"type": "json",
+			"name": "panini3_0_json"
+		},
+		{
+			"url": "assets/app/ani/panini3_0.png",
+			"type": "image",
+			"name": "panini3_0_png"
+		},
+		{
+			"url": "assets/app/ani/panini3_1.json",
+			"type": "json",
+			"name": "panini3_1_json"
+		},
+		{
+			"url": "assets/app/ani/panini3_1.png",
+			"type": "image",
+			"name": "panini3_1_png"
+		},
+		{
+			"url": "assets/app/ani/yimian0.json",
+			"type": "json",
+			"name": "yimian0_json"
+		},
+		{
+			"url": "assets/app/ani/yimian0.png",
+			"type": "image",
+			"name": "yimian0_png"
+		},
+		{
+			"url": "assets/app/ani/yimian1_0.json",
+			"type": "json",
+			"name": "yimian1_0_json"
+		},
+		{
+			"url": "assets/app/ani/yimian1_0.png",
+			"type": "image",
+			"name": "yimian1_0_png"
+		},
+		{
+			"url": "assets/app/ani/yimian1_1.json",
+			"type": "json",
+			"name": "yimian1_1_json"
+		},
+		{
+			"url": "assets/app/ani/yimian1_1.png",
+			"type": "image",
+			"name": "yimian1_1_png"
+		},
+		{
+			"url": "assets/app/ani/yimian1_2.json",
+			"type": "json",
+			"name": "yimian1_2_json"
+		},
+		{
+			"url": "assets/app/ani/yimian1_2.png",
+			"type": "image",
+			"name": "yimian1_2_png"
+		},
+		{
+			"url": "assets/app/ani/yimian1_3.json",
+			"type": "json",
+			"name": "yimian1_3_json"
+		},
+		{
+			"url": "assets/app/ani/yimian1_3.png",
+			"type": "image",
+			"name": "yimian1_3_png"
+		},
+		{
+			"url": "assets/app/ani/yan.json",
+			"type": "json",
+			"name": "yan_json"
+		},
+		{
+			"url": "assets/app/ani/yan.png",
+			"type": "image",
+			"name": "yan_png"
+		},
+		{
+			"url": "assets/app/img/head_bg.png",
+			"type": "image",
+			"name": "head_bg_png"
+		},
+		{
+			"url": "assets/app/ani/panini2.json",
+			"type": "json",
+			"name": "panini2_json"
+		},
+		{
+			"url": "assets/app/ani/panini2.png",
+			"type": "image",
+			"name": "panini2_png"
+		},
+		{
+			"url": "assets/app/ani/panini4.json",
+			"type": "json",
+			"name": "panini4_json"
+		},
+		{
+			"url": "assets/app/ani/panini4.png",
+			"type": "image",
+			"name": "panini4_png"
+		},
+		{
+			"url": "assets/app/ani/sela0.json",
+			"type": "json",
+			"name": "sela0_json"
+		},
+		{
+			"url": "assets/app/ani/sela0.png",
+			"type": "image",
+			"name": "sela0_png"
+		},
+		{
+			"url": "assets/app/ani/sela1.json",
+			"type": "json",
+			"name": "sela1_json"
+		},
+		{
+			"url": "assets/app/ani/sela1.png",
+			"type": "image",
+			"name": "sela1_png"
+		},
+		{
+			"url": "assets/app/ani/sela3.json",
+			"type": "json",
+			"name": "sela3_json"
+		},
+		{
+			"url": "assets/app/ani/sela3.png",
+			"type": "image",
+			"name": "sela3_png"
+		},
+		{
+			"url": "assets/app/ani/sela4.json",
+			"type": "json",
+			"name": "sela4_json"
+		},
+		{
+			"url": "assets/app/ani/sela4.png",
+			"type": "image",
+			"name": "sela4_png"
+		},
+		{
+			"url": "assets/app/ani/sela5.json",
+			"type": "json",
+			"name": "sela5_json"
+		},
+		{
+			"url": "assets/app/ani/sela5.png",
+			"type": "image",
+			"name": "sela5_png"
+		},
+		{
+			"url": "assets/app/ani/yimian2.json",
+			"type": "json",
+			"name": "yimian2_json"
+		},
+		{
+			"url": "assets/app/ani/yimian2.png",
+			"type": "image",
+			"name": "yimian2_png"
+		},
+		{
+			"url": "assets/app/ani/gaijiaofan0.json",
+			"type": "json",
+			"name": "gaijiaofan0_json"
+		},
+		{
+			"url": "assets/app/ani/gaijiaofan0.png",
+			"type": "image",
+			"name": "gaijiaofan0_png"
+		},
+		{
+			"url": "assets/app/ani/gaijiaofan2.json",
+			"type": "json",
+			"name": "gaijiaofan2_json"
+		},
+		{
+			"url": "assets/app/ani/gaijiaofan2.png",
+			"type": "image",
+			"name": "gaijiaofan2_png"
+		},
+		{
+			"url": "assets/app/ani/panini0.json",
+			"type": "json",
+			"name": "panini0_json"
+		},
+		{
+			"url": "assets/app/ani/panini0.png",
+			"type": "image",
+			"name": "panini0_png"
+		},
+		{
+			"url": "assets/app/ani/panini1.json",
+			"type": "json",
+			"name": "panini1_json"
+		},
+		{
+			"url": "assets/app/ani/panini1.png",
+			"type": "image",
+			"name": "panini1_png"
+		},
+		{
+			"url": "assets/app/ani/gaizhang.json",
+			"type": "json",
+			"name": "gaizhang_json"
+		},
+		{
+			"url": "assets/app/ani/gaizhang.png",
+			"type": "image",
+			"name": "gaizhang_png"
+		},
+		{
+			"url": "assets/app/ani/dabao.json",
+			"type": "json",
+			"name": "dabao_json"
+		},
+		{
+			"url": "assets/app/ani/dabao.png",
+			"type": "image",
+			"name": "dabao_png"
+		},
+		{
+			"url": "assets/app/ani/dabaoDown.json",
+			"type": "json",
+			"name": "dabaoDown_json"
+		},
+		{
+			"url": "assets/app/ani/dabaoDown.png",
+			"type": "image",
+			"name": "dabaoDown_png"
+		},
+		{
+			"url": "assets/app/ani/gaijiaofanDown.json",
+			"type": "json",
+			"name": "gaijiaofanDown_json"
+		},
+		{
+			"url": "assets/app/ani/gaijiaofanDown.png",
+			"type": "image",
+			"name": "gaijiaofanDown_png"
+		},
+		{
+			"url": "assets/app/ani/gaijiaofanUp.json",
+			"type": "json",
+			"name": "gaijiaofanUp_json"
+		},
+		{
+			"url": "assets/app/ani/gaijiaofanUp.png",
+			"type": "image",
+			"name": "gaijiaofanUp_png"
+		},
+		{
+			"url": "assets/app/ani/paniniDown.json",
+			"type": "json",
+			"name": "paniniDown_json"
+		},
+		{
+			"url": "assets/app/ani/paniniDown.png",
+			"type": "image",
+			"name": "paniniDown_png"
+		},
+		{
+			"url": "assets/app/ani/paniniUp.json",
+			"type": "json",
+			"name": "paniniUp_json"
+		},
+		{
+			"url": "assets/app/ani/paniniUp.png",
+			"type": "image",
+			"name": "paniniUp_png"
+		},
+		{
+			"url": "assets/app/ani/yimianDown.json",
+			"type": "json",
+			"name": "yimianDown_json"
+		},
+		{
+			"url": "assets/app/ani/yimianDown.png",
+			"type": "image",
+			"name": "yimianDown_png"
+		},
+		{
+			"url": "assets/app/ani/selaDown.json",
+			"type": "json",
+			"name": "selaDown_json"
+		},
+		{
+			"url": "assets/app/ani/selaDown.png",
+			"type": "image",
+			"name": "selaDown_png"
+		},
+		{
+			"url": "assets/app/ani/yimianUp.json",
+			"type": "json",
+			"name": "yimianUp_json"
+		},
+		{
+			"url": "assets/app/ani/yimianUp.png",
+			"type": "image",
+			"name": "yimianUp_png"
+		},
+		{
+			"url": "assets/app/ani/selaUp.json",
+			"type": "json",
+			"name": "selaUp_json"
+		},
+		{
+			"url": "assets/app/ani/selaUp.png",
+			"type": "image",
+			"name": "selaUp_png"
+		},
+		{
+			"url": "assets/app/img/img_baitiao.png",
+			"type": "image",
+			"name": "img_baitiao_png"
+		},
+		{
+			"url": "assets/app/img/img_guidao_1.png",
+			"type": "image",
+			"name": "img_guidao_1_png"
+		},
+		{
+			"url": "assets/app/img/img_guidao_2.png",
+			"type": "image",
+			"name": "img_guidao_2_png"
+		},
+		{
+			"url": "assets/app/img/img_zhuozi.png",
+			"type": "image",
+			"name": "img_zhuozi_png"
+		},
+		{
+			"url": "assets/app/img/boxbg.png",
+			"type": "image",
+			"name": "boxbg_png"
+		}
+	]
+}
