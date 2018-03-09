@@ -19,6 +19,11 @@ module app {
 			waitUnit.data = e.data;
 			waitUnit.addEventListener(lxl.CEvent.LOAD_SKIN_COMPLETE, ()=>{
 				this.waitArr.push(waitUnit);
+				let times = Math.random() * 6 + 4;
+				waitUnit.width = waitUnit.width * times * 0.1;
+				waitUnit.height = waitUnit.height * times * 0.1;
+				waitUnit.x = Math.random() * (this.width - waitUnit.width);
+				waitUnit.y = Math.random() * (this.height - waitUnit.height);
 				this.group.addChild(waitUnit);
 			}, this);
 		}

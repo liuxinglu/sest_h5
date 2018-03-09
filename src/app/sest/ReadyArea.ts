@@ -33,7 +33,7 @@ module app {
 		private p5:PackUnit;
 		private p6:PackUnit;
 		private p7:PackUnit;
-		private _packArr:Array<number> = [];
+		private _packArr:Array<string> = [];
 		private _downMC:egret.MovieClip;
 		private _upMC:egret.MovieClip;
 
@@ -55,19 +55,33 @@ module app {
 			let mu:MakeUnit = e.data;
 			let n = Gra.getFoodName(mu.food.foodType);
 			this._upMC = Res.getMovieClip(n + "Down_json", n + "Down_png", n + "Down");
-			this._upMC.x = this["p" + this._packArr.length].x + this["p" + this._packArr.length].width / 2;
-			this._upMC.y = this["p" + this._packArr.length].y + this["p" + this._packArr.length].height;
-			mu.index = this._packArr.length;
-			this["p" + this._packArr.length].makeUnit = mu;
-			mu.x = this._upMC.x - this["p" + this._packArr.length].width / 2;
+			let index = 0;
+			if(this._packArr.length <= 7) {
+				index = this._packArr.length;
+				this._packArr.push(mu.food.cookId);
+			} else {
+				for(let i = 0; i < this._packArr.length; i++) {
+					if(this._packArr[i] == "") {
+						index = i;
+						break;
+					}
+				}
+			}
+			this._upMC.x = this["p" + index].x + this["p" + index].width / 2;
+			this._upMC.y = this["p" + index].y + this["p" + index].height;
+			this._upMC.name = index.toString();
+			mu.index = index;
+			this["p" + index].makeUnit = mu;
+			mu.x = this._upMC.x - this["p" + index].width / 2;
 			mu.y = -100;
 			mu.visible = true;
 			this.addChildAt(mu, 6);
 			this.addChildAt(this._upMC, 6);
+			this._packArr.push(mu.food.cookId);
 			this._upMC.addEventListener(egret.Event.COMPLETE, this._upComplete, this);
 			this._upMC.play(1);
 			let muDown:number = 0;
-			if(this._packArr.length <= 3) {
+			if(index <= 3) {
 				muDown = 800;
 			} else {
 				muDown = 500;
@@ -76,8 +90,7 @@ module app {
 			.to({y : this._upMC.y - 141}, muDown)
 			.call(()=>{
 				this.removeChild(mu);
-			}, this);;
-			this._packArr.push(1);
+			}, this);
 		}
 
 		private _upComplete(e:egret.Event) {
@@ -85,11 +98,14 @@ module app {
 			egret.Tween.get(this._upMC)
 			.to({y : -100}, 1000)
 			.call(()=>{
+				this["p" + this._upMC.name].pack();
 				this.removeChild(this._upMC);
-				this["p" + (this._packArr.length - 1)].pack();
-			});
+			}, this, [e]);
 			
-			this["p" + this._packArr]
+		}
+
+		private _gaizhangHandler(e:lxl.CEvent) {
+			lxl.CDispatcher.getInstance().addListener(lxl.CEvent.NEW_SITE, this._newSiteHandler, this);
 		}
 
 		private _newSiteHandler(e:lxl.CEvent) {
@@ -102,10 +118,6 @@ module app {
 					}
 				}
 			}
-		}
-
-		private _gaizhangHandler(e:lxl.CEvent) {
-			lxl.CDispatcher.getInstance().addListener(lxl.CEvent.NEW_SITE, this._newSiteHandler, this);
 		}
 
 		private _imgArr:Array<Target> = [];
@@ -161,6 +173,11 @@ module app {
 				this["group" + targetIndex].addChildAt(target, 1);
 				e.data.removeQianZi();
 				e.data.getBox();
+				for(let i = 0; i < this._packArr.length; i++) {
+					if(this._packArr[i] == mu.food.cookId){
+						this._packArr[i] = "";
+					}
+				}
 				egret.Tween.get(this._imgArr[this._imgArr.length - 1])
 				.to({x:this._xPosArr[(parseInt(site.siteNum) - 1) % 8]}, 2000)
 				.call(()=>{

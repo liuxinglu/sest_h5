@@ -29,13 +29,13 @@ module app {
 				makeUnit.x = Gra.aniPosition[makeUnit.line][makeUnit.food.curStep][0];//一维代表第几条传送带，2维第几个位置
 				makeUnit.y = Gra.aniPosition[makeUnit.line][makeUnit.food.curStep][1];
 				if(makeUnit.line == 0) {
-					if(this.upArr[0].x != this._lastUpUnit.x && this.upArr[0].y != this._lastUpUnit.y) {
+					if(this.upArr[0].x != this._lastUpUnit.x) {
 						this._lastUpUnit = this.upArr.splice(0, 1)[0];
 						this._lastUpUnit.playAni(1);
 						this.addChild(this._lastUpUnit);
 					}
 				} else {
-					if(this.downArr[0].x != this._lastDownUnit.x && this.downArr[0].y != this._lastDownUnit.y) {
+					if(this.downArr[0].x != this._lastDownUnit.x) {
 						this._lastDownUnit = this.downArr.splice(0, 1)[0];
 						this._lastDownUnit.playAni(1);
 						this.addChild(this._lastDownUnit);

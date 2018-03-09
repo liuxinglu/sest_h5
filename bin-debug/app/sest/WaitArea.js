@@ -27,6 +27,11 @@ var app;
             waitUnit.data = e.data;
             waitUnit.addEventListener(lxl.CEvent.LOAD_SKIN_COMPLETE, function () {
                 _this.waitArr.push(waitUnit);
+                var times = Math.random() * 6 + 4;
+                waitUnit.width = waitUnit.width * times * 0.1;
+                waitUnit.height = waitUnit.height * times * 0.1;
+                waitUnit.x = Math.random() * (_this.width - waitUnit.width);
+                waitUnit.y = Math.random() * (_this.height - waitUnit.height);
                 _this.group.addChild(waitUnit);
             }, this);
         };

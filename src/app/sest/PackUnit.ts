@@ -106,6 +106,7 @@ module app {
 			this.y = this._originY - 400;
 			this.scaleX = 1;
 			this.scaleY = 1;
+			this.img_head.visible = false;
 			egret.Tween.get(this)
 				.to({y:this._originY}, 1000)
 				.call(()=>{

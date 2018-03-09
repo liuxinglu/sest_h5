@@ -39,14 +39,14 @@ var app;
                 makeUnit.x = Gra.aniPosition[makeUnit.line][makeUnit.food.curStep][0]; //一维代表第几条传送带，2维第几个位置
                 makeUnit.y = Gra.aniPosition[makeUnit.line][makeUnit.food.curStep][1];
                 if (makeUnit.line == 0) {
-                    if (_this.upArr[0].x != _this._lastUpUnit.x && _this.upArr[0].y != _this._lastUpUnit.y) {
+                    if (_this.upArr[0].x != _this._lastUpUnit.x) {
                         _this._lastUpUnit = _this.upArr.splice(0, 1)[0];
                         _this._lastUpUnit.playAni(1);
                         _this.addChild(_this._lastUpUnit);
                     }
                 }
                 else {
-                    if (_this.downArr[0].x != _this._lastDownUnit.x && _this.downArr[0].y != _this._lastDownUnit.y) {
+                    if (_this.downArr[0].x != _this._lastDownUnit.x) {
                         _this._lastDownUnit = _this.downArr.splice(0, 1)[0];
                         _this._lastDownUnit.playAni(1);
                         _this.addChild(_this._lastDownUnit);
